@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title> A-ONE CAR RENTALS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    padding:15px 50px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffcc00;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#ffcc00;
+    color:black;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* SERVICES */
+.services{
+    padding:80px 50px;
+    text-align:center;
+    background-color: darksalmon;
+}
+
+.services h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.car-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.car-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.car-card:hover{
+    transform:translateY(-10px);
+}
+
+.car-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.car-card h3{
+    margin:20px 0 10px;
+}
+
+.car-card p{
+    padding:0 20px 20px;
+    color:#666;
+}
+
+.price{
+    color:#ff9900;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* ABOUT */
+.about{
+    background-color:lemonchiffon;
+    color: brown;
+    padding:80px 50px;
+    text-align:center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:20px;
+    text-decoration: underline;
+}
+
+.about p{
+
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+    color: #000;
+   
+}
+
+/* CONTACT */
+.contact{
+    padding:80px 50px;
+    text-align:center;
+    background-color:lightcoral;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contact h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#eeeeee;
+}
+
+.contact button{
+    padding:15px 35px;
+    border:none;
+    background:#ffcc00;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    background:black;
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo"> A1 CAR RENTAL </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>A-ONE CAR RENTAL</h1>
+        <p> Looking for a reliable and affordable ride 
+            for your next trip? Our car rental service
+             offers a wide range of clean, comfortable, 
+             and well-maintained vehicles perfect for 
+             business travel, family vacations, weekend 
+             getaways, and daily commutes. With flexible 
+             rental plans, competitive prices, and exceptional
+              customer service, we make every journey smooth 
+              and stress-free.Drive with confidence, convenience, and 
+              comfort — book with us today and experience the 
+              road like never before! </p>
+        <a href="#cars" class="btn"> EXPLORE OUR CARS</a>
+    </div>
+</section>
+
+<!-- CARS -->
+<section class="services" id="cars">
+    <h2>Our Premium Cars</h2>
+
+    <div class="car-grid">
+
+        <div class="car-card">
+            <img src="creeta.jpg" alt="">
+            <h3>WHITE CREETA</h3>
+            <p>Luxury sports experience with ultimate comfort.</p>
+            <div class="price">8k per day</div>
+        </div>
+
+        <div class="car-card">
+            <img src="creta.jpg" alt="">
+            <p>Feel the speed and power on every road.</p>
+            <div class="price">8K per day </div>
+        </div>
+
+        <div class="car-card">
+            <img src="kia.jpg" alt="">
+            <h5>WHITE KIASONET</h5>
+            <p>Elegant design with smooth driving comfort.</p>
+            <div class="price">7.5k per day</div>
+        </div>
+        <div class="car-card">
+            <img src="toyota.jpg" alt="">
+            <h6>TOYOTA COROLLA</h6>
+            <p>The global benchmark for everyday reliability, built to outlast the road ahead.</p>
+            <div class="price">5k per day</div>
+        </div>
+        <div class="car-card">
+            <img src="grandi10.jpg" alt="">
+            <h7>GRAND I10</h7>
+            <p>A feature-packed, nimble city slicker that adds more style and tech to your daily hustle</p>
+            <div class="price">5k per day</div>
+        
+        </div> 
+        <div class="car-card">
+            <img src="scorpio.jpg" alt="">
+            <h8>WHITE SCORPIO</h8>
+            <p>Dominant, rugged, and ready to conquer any terrain.</p>
+            <div class="price">10k per day</div>
+        </div>
+        <div class="car-card">
+            <img src="renault.jpg" alt="">
+            <h9>RENAULT KIGER</h9>
+            <p>Sub contact SUV</p>
+            <div class="price">7.5k per day</div>
+        </div>
+        
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2>Why Choose Us?</h2>
+    <p>
+     Ready to hit the road with total peace of mind? When you choose us for your next journey, you’re getting more than just a set of keys—you’re getting a seamless, stress-free travel experience. We pride ourselves on a modern, meticulously maintained fleet, transparent pricing with absolutely no hidden fees, and a dedicated team ready to support you every mile of the way. From quick weekend getaways to extended road trips, we’re here to make sure your ride is as memorable as your destination. Book with us today and experience the difference that true customer-first service makes!
+
+Your journey deserves a reliable partner. We combine a premium selection of top-tier vehicles with an efficient, hassle-free booking process designed to respect your time. Whether you need a sleek sedan for a business trip or a spacious SUV for a family vacation, our commitment to safety, pristine cleanliness, and competitive rates ensures you always drive with confidence. Choose us for your next rental and enjoy a seamless travel experience from pickup to drop-off.
+
+ Why choose us for your next rental? Because we believe getting to your destination should be just as enjoyable as being there. With our diverse fleet of reliable vehicles, transparent upfront pricing, and unmatched 24/7 customer support, we take the stress out of car rentals so you can focus on the road ahead. Book your ride today and let us drive your next adventure forward!
+        We provide premium quality vehicles, affordable pricing,
+        and excellent customer service. Whether you need a luxury car
+        for business, travel, or special events, A-ONE  gives you
+        the perfect driving experience. <br>
+        OUR SERVICES INCLUDE :<br>
+        -PICK AND DROP<br>
+        -RENT YOUR VEHICLE <br>
+        -VEHICLE FOR WEDDINGS<br>
+        -EXPERIENCED DRIVER<br>
+        -SELF DRIVER
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Book Your Ride 🏎️ </h2>
+
+    <form onsubmit="contactForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="number" placeholder="Your contact number" required>
+        <input type="text" placeholder="Car preference" required>
+        <br>
+        
+
+        <button type="submit">Send Booking Request</button>
+       Contact Us via whatsapp :<br>
+      </form>
+    <br>    9861425703<br>
+        <br>
+        9814025778
+    
+</section>
+
+<footer>
+    <p> A-ONE RENTAL| All Rights Reserved</p>
+</footer>
+
+<script>
+function submitForm(event){
+    event.preventDefault();
+    alert("Booking request sent successfully!");
+}
+</script>
+
+</body>
+</html>
